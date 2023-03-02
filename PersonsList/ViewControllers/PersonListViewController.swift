@@ -10,14 +10,16 @@ import UIKit
 final class PersonListViewController: UITableViewController {
     
     private let persons = newPerson
+    
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailsVC = segue.destination as? PersonDetailsViewController
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        detailsVC?.person = persons[indexPath.row]
+    }
 }
-// MARK: - Navigation
-override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let detailsVC = segue.destination as? PersonDetailsViewController
-    guard let indexPath = tableView.indexPathForSelectedRow else { return }
-    detailsVC?.person = persons[indexPath.row]
-}
-
 // MARK: - UITableViewDataSource
 extension PersonListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,4 +35,3 @@ extension PersonListViewController {
         return cell
     }
 }
-
