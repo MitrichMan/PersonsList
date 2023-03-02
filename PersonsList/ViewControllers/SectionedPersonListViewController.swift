@@ -10,8 +10,9 @@ import UIKit
 final class SectionedPersonListViewController: UITableViewController {
     
     private let persons = newPerson
-    
-    // MARK: - UITableViewDataSource
+}
+// MARK: - UITableViewDataSource
+extension SectionedPersonListViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         persons.count
     }
@@ -39,3 +40,4 @@ final class SectionedPersonListViewController: UITableViewController {
         return cell
     }
 }
+
