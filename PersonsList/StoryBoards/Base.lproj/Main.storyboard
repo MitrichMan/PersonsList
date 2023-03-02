@@ -93,7 +93,7 @@
                 <navigationController id="Uaz-0l-uKp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Contacts" image="person.circle" catalog="system" id="dye-7D-fNb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="aNd-j3-h0f">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

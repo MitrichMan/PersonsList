@@ -7,13 +7,13 @@
 
 import UIKit
 
-class PersonDetailsViewController: UIViewController {
+final class PersonDetailsViewController: UIViewController {
     
     @IBOutlet var phoneLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
     
     var person: Person!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = person.fullName

@@ -7,14 +7,10 @@
 
 import UIKit
 
-class SectionedPersonListViewController: UITableViewController {
+final class SectionedPersonListViewController: UITableViewController {
     
     private let persons = newPerson
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
+    
     // MARK: - UITableViewDataSource
     override func numberOfSections(in tableView: UITableView) -> Int {
         persons.count
@@ -27,7 +23,7 @@ class SectionedPersonListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath)
         var content = cell.defaultContentConfiguration()
