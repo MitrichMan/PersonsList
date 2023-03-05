@@ -9,16 +9,16 @@ import UIKit
 
 final class SectionedPersonListViewController: UITableViewController {
     
-    private let persons = newPerson
+    var personList: [Person] = []
 }
 // MARK: - UITableViewDataSource
 extension SectionedPersonListViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        persons.count
+        personList.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        persons[section].fullName
+        personList[section].fullName
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,7 +28,7 @@ extension SectionedPersonListViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        let person = persons[indexPath.section]
+        let person = personList[indexPath.section]
         if indexPath.row == 0 {
             content.image = UIImage(systemName: "phone")
             content.text = person.phone

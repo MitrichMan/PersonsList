@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D42F4E729B45D7F00AD6DE4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D42F4E629B45D7F00AD6DE4 /* TabBarController.swift */; };
 		4DC9C8EA29B0C34C00E1FD5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9C8E929B0C34C00E1FD5D /* AppDelegate.swift */; };
 		4DC9C8EC29B0C34C00E1FD5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9C8EB29B0C34C00E1FD5D /* SceneDelegate.swift */; };
 		4DC9C8F129B0C34C00E1FD5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC9C8EF29B0C34C00E1FD5D /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D42F4E629B45D7F00AD6DE4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4DC9C8E629B0C34C00E1FD5D /* PersonsList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonsList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC9C8E929B0C34C00E1FD5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DC9C8EB29B0C34C00E1FD5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		4DC9C90129B0C3F400E1FD5D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4D42F4E629B45D7F00AD6DE4 /* TabBarController.swift */,
 				4DC9C8FF29B0C3EA00E1FD5D /* PersonListViewController.swift */,
 				4DC9C90A29B0DDB000E1FD5D /* PersonDetailsViewController.swift */,
 				4DC9C90C29B0E9E700E1FD5D /* SectionedPersonListViewController.swift */,
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DC9C90629B0C50200E1FD5D /* Person.swift in Sources */,
+				4D42F4E729B45D7F00AD6DE4 /* TabBarController.swift in Sources */,
 				4DC9C90029B0C3EA00E1FD5D /* PersonListViewController.swift in Sources */,
 				4DC9C90B29B0DDB000E1FD5D /* PersonDetailsViewController.swift in Sources */,
 				4DC9C90329B0C48200E1FD5D /* DataStore.swift in Sources */,
