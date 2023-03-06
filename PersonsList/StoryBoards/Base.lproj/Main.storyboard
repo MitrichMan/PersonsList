@@ -50,10 +50,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="person" id="ne6-cO-PH5">
-                                <rect key="frame" x="0.0" y="50" width="320" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" rowHeight="60" id="ne6-cO-PH5" customClass="HeaderTableViewCell" customModule="PersonsList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ne6-cO-PH5" id="lEg-FY-AYW">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="AJS-oe-coz">
+                                            <rect key="frame" x="60" y="11" width="51.5" height="38.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqw-EJ-FWZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="51.5" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1p-Qs-uI4">
+                                                    <rect key="frame" x="0.0" y="18.5" width="51.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtK-TL-ezu">
+                                            <rect key="frame" x="254" y="13" width="50" height="34"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="phone" catalog="system">
+                                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="phoneButtonPressed" destination="ne6-cO-PH5" eventType="touchUpInside" id="BE5-am-36B"/>
+                                            </connections>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wi5-iI-Lhz">
+                                            <rect key="frame" x="12" y="10.5" width="40" height="39"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="3my-rj-lKB"/>
+                                                <constraint firstAttribute="height" constant="40" id="jAH-Mg-fDj"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Wi5-iI-Lhz" firstAttribute="leading" secondItem="lEg-FY-AYW" secondAttribute="leading" constant="12" id="E7O-cs-W1B"/>
+                                        <constraint firstItem="JtK-TL-ezu" firstAttribute="trailing" secondItem="lEg-FY-AYW" secondAttribute="trailingMargin" id="F3z-VA-4we"/>
+                                        <constraint firstItem="JtK-TL-ezu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AJS-oe-coz" secondAttribute="trailing" constant="20" id="Jlx-gQ-rJv"/>
+                                        <constraint firstItem="Wi5-iI-Lhz" firstAttribute="centerY" secondItem="lEg-FY-AYW" secondAttribute="centerY" id="OPc-qk-Oj8"/>
+                                        <constraint firstItem="JtK-TL-ezu" firstAttribute="centerY" secondItem="lEg-FY-AYW" secondAttribute="centerY" id="S1g-uQ-kaX"/>
+                                        <constraint firstItem="AJS-oe-coz" firstAttribute="centerY" secondItem="lEg-FY-AYW" secondAttribute="centerY" id="rxb-Pj-hae"/>
+                                        <constraint firstItem="AJS-oe-coz" firstAttribute="leading" secondItem="Wi5-iI-Lhz" secondAttribute="trailing" constant="8" symbolic="YES" id="up7-9M-9yW"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="cqw-EJ-FWZ" id="ins-f1-0Vc"/>
+                                    <outlet property="surnameLabel" destination="K1p-Qs-uI4" id="sQz-tv-tDd"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="person" id="XdX-m5-2tm">
+                                <rect key="frame" x="0.0" y="110" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XdX-m5-2tm" id="nQY-TN-P4a">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
@@ -69,7 +128,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hkq-Ao-2GO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628" y="720"/>
+            <point key="canvasLocation" x="1627.5" y="719.36619718309862"/>
         </scene>
         <!--Persons List-->
         <scene sceneID="yWL-1c-ZFl">
@@ -140,7 +199,7 @@
                 <navigationController id="fIS-bi-6uC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="contacts" image="person.circle" catalog="system" id="Kjj-d1-9f6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="9T6-Eh-2HM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -155,6 +214,7 @@
     <resources>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="phone" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

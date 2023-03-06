@@ -16,14 +16,18 @@ struct Person {
     var fullName: String {
         "\(name) \(surname)"
     }
+    
+    var rows: [String] {
+        [phone, email]
+    }
 }
 
 extension Person {
     static func getPersonList() -> [Person] {
-        let names = PersonsData.getPersonsData().names.shuffled()
-        let surnames = PersonsData.getPersonsData().surnames.shuffled()
-        let phones = PersonsData.getPersonsData().phones.shuffled()
-        let emails = PersonsData.getPersonsData().emails.shuffled()
+        let names = PersonsData.shared.names.shuffled()
+        let surnames = PersonsData.shared.surnames.shuffled()
+        let phones = PersonsData.shared.phones.shuffled()
+        let emails = PersonsData.shared.emails.shuffled()
         
         var personList: [Person] = []
         

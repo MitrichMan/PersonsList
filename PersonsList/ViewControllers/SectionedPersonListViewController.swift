@@ -17,31 +17,65 @@ extension SectionedPersonListViewController {
         personList.count
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        personList[section].fullName
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         2
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        personList[section].rows.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath)
-        var content = cell.defaultContentConfiguration()
+        
         let person = personList[indexPath.section]
-        if indexPath.row == 0 {
-            content.image = UIImage(systemName: Contacts.phone.rawValue)
-            content.text = person.phone
-        } else {
-            content.image = UIImage(systemName: Contacts.email.rawValue)
-            content.text = person.email
-        }
+        var content = cell.defaultContentConfiguration()
+        
+        content.text = person.rows[indexPath.row]
+        content.image = indexPath.row == 0
+        ? UIImage(systemName: Contacts.phone.rawValue)
+        : UIImage(systemName: Contacts.email.rawValue)
+        
         cell.contentConfiguration = content
         return cell
     }
+}
+
+// MARK: - UITableViewDelegate
+extension SectionedPersonListViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as? HeaderTableViewCell
+        let person = personList[section]
+        cell?.nameLabel.text = person.name
+        cell?.surnameLabel.text = person.surname
+        return cell
+    }
+    
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let fullNameLabel = UILabel(
+//            frame: CGRect(
+//                x: 16,
+//                y: 3,
+//                width: tableView.frame.width,
+//                height: 20
+//            )
+//        )
+//        fullNameLabel.text = personList[section].fullName
+//        fullNameLabel.font = UIFont.boldSystemFont(ofSize: 17)
+//        fullNameLabel.textColor = .white
+//
+//        let contentView = UIView()
+//        contentView.addSubview(fullNameLabel)
+//
+//        return contentView
+//    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.backgroundColor = .gray
+    }
+    
+//    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        60
+//    }
 }
 

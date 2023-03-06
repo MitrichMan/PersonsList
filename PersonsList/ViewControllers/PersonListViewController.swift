@@ -29,8 +29,10 @@ extension PersonListViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath)
         var content = cell.defaultContentConfiguration()
         let person = personList[indexPath.row]
+        
         content.text = person.fullName
         cell.contentConfiguration = content
+        
         return cell
     }
 }

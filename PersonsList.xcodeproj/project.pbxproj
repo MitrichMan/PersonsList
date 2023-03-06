@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2DABDD29B62B6A00E9E67F /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DABDC29B62B6A00E9E67F /* HeaderTableViewCell.swift */; };
 		4D42F4E729B45D7F00AD6DE4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D42F4E629B45D7F00AD6DE4 /* TabBarController.swift */; };
 		4DC9C8EA29B0C34C00E1FD5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9C8E929B0C34C00E1FD5D /* AppDelegate.swift */; };
 		4DC9C8EC29B0C34C00E1FD5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9C8EB29B0C34C00E1FD5D /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D2DABDC29B62B6A00E9E67F /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		4D42F4E629B45D7F00AD6DE4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4DC9C8E629B0C34C00E1FD5D /* PersonsList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonsList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC9C8E929B0C34C00E1FD5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D2DABDB29B62B2B00E9E67F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D2DABDC29B62B6A00E9E67F /* HeaderTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4DC9C8DD29B0C34C00E1FD5D = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		4DC9C8E829B0C34C00E1FD5D /* PersonsList */ = {
 			isa = PBXGroup;
 			children = (
+				4D2DABDB29B62B2B00E9E67F /* Views */,
 				4DC9C8FD29B0C37600E1FD5D /* App */,
 				4DC9C90729B0C50B00E1FD5D /* Models */,
 				4DC9C90429B0C49700E1FD5D /* Services */,
@@ -194,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DC9C90629B0C50200E1FD5D /* Person.swift in Sources */,
+				4D2DABDD29B62B6A00E9E67F /* HeaderTableViewCell.swift in Sources */,
 				4D42F4E729B45D7F00AD6DE4 /* TabBarController.swift in Sources */,
 				4DC9C90029B0C3EA00E1FD5D /* PersonListViewController.swift in Sources */,
 				4DC9C90B29B0DDB000E1FD5D /* PersonDetailsViewController.swift in Sources */,
