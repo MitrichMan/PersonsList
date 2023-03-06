@@ -34,7 +34,7 @@
                             <outlet property="delegate" destination="z9v-sZ-YWV" id="05f-w4-vfC"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Contacts" image="person.circle" catalog="system" id="X2m-bV-uSO"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="person.circle.fill" catalog="system" id="X2m-bV-uSO"/>
                     <navigationItem key="navigationItem" title="Persons List" largeTitleDisplayMode="always" id="xEH-vA-a2W"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdy-Cz-bRZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -64,18 +64,18 @@
                             <outlet property="delegate" destination="CVY-4d-CiH" id="bY7-3E-40h"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Contacts" image="person.circle" catalog="system" id="XZy-Iu-9IJ"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="person.circle.fill" catalog="system" id="XZy-Iu-9IJ"/>
                     <navigationItem key="navigationItem" title="Persons List" id="Zve-Qd-2xu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hkq-Ao-2GO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1628" y="720"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Persons List-->
         <scene sceneID="yWL-1c-ZFl">
             <objects>
                 <tabBarController id="XQt-2P-mp3" customClass="TabBarController" customModule="PersonsList" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="QRD-xV-HYp"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="QRD-xV-HYp"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZjE-SN-sgG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -137,7 +137,7 @@
         <!--contacts-->
         <scene sceneID="eH3-2J-ggJ">
             <objects>
-                <navigationController id="fIS-bi-6uC" customClass="StartViewController" customModule="PersonsList" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="fIS-bi-6uC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="contacts" image="person.circle" catalog="system" id="Kjj-d1-9f6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="9T6-Eh-2HM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
@@ -154,6 +154,7 @@
     </scenes>
     <resources>
         <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

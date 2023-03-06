@@ -22,7 +22,11 @@ extension SectionedPersonListViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+         2
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,10 +34,10 @@ extension SectionedPersonListViewController {
         var content = cell.defaultContentConfiguration()
         let person = personList[indexPath.section]
         if indexPath.row == 0 {
-            content.image = UIImage(systemName: "phone")
+            content.image = UIImage(systemName: Contacts.phone.rawValue)
             content.text = person.phone
         } else {
-            content.image = UIImage(systemName: "tray")
+            content.image = UIImage(systemName: Contacts.email.rawValue)
             content.text = person.email
         }
         cell.contentConfiguration = content

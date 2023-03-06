@@ -10,8 +10,6 @@ import UIKit
 final class PersonListViewController: UITableViewController {
     
     var personList: [Person] = []
-
-
     
     // MARK: - Navigation
     

@@ -27,7 +27,14 @@ extension Person {
         
         var personList: [Person] = []
         
-        for index in 0..<names.count {
+        let iterationCount = min(
+            names.count,
+            surnames.count,
+            emails.count,
+            phones.count
+        )
+        
+        for index in 0..<iterationCount {
             personList.append(
                 Person(
                     name: names[index],
@@ -37,17 +44,12 @@ extension Person {
                 )
             )
         }
-        
-        //        while names.count != 0 {
-        //            personList.append(
-        //                Person(
-        //                    name: names.remove(at: Int.random(in: 0..<names.count)),
-        //                    surname: surnames.remove(at: Int.random(in: 0..<surnames.count)),
-        //                    phone: phones.remove(at: Int.random(in: 0..<phones.count)),
-        //                    email: emails.remove(at: Int.random(in: 0..<emails.count))
-        //                )
-        //            )
-        //        }
         return personList
     }
 }
+
+enum Contacts: String {
+    case phone = "phone"
+    case email = "tray"
+}
+
